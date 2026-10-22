@@ -518,9 +518,9 @@ document.getElementById("q").addEventListener("input", function(e){ state.q = e.
 var overlay = document.getElementById("overlay"), sheet = document.getElementById("sheet");
 function filmPanelHTML(f){
   var c = catByNum[f.cls];
-  return '<div class="ph2"><img src="'+esc(f.img)+'" alt="'+esc(styleTitle(f))+' — 例片《'+esc(f.cn)+'》剧照"></div>'
+  return '<div class="ph2"><img src="'+esc(f.img)+'" alt="'+esc(styleTitle(f))+' — 例片《'+esc(bilingual(f.cn,f.orig))+'》剧照"></div>'
     + '<h3 class="fstyle">'+esc(styleTitle(f))+'</h3>'
-    + '<div class="orig"><span class="ex">例片</span>《'+esc(f.cn)+'》 — '+esc(f.year)+' · '+esc(f.country)+(f.genre?' · '+esc(f.genre):'')+'</div>'
+    + '<div class="orig"><span class="ex">例片</span>《'+esc(bilingual(f.cn,f.orig))+'》 — '+esc(f.year)+' · '+esc(f.country)+(f.genre?' · '+esc(f.genre):'')+'</div>'
     + '<div class="meta"><div><span>年份</span>'+esc(f.year)+'</div><div><span>国家/地区</span>'+esc(f.country)+'</div><div><span>导演</span>'+esc(f.director)+'</div><div><span>副类</span>'+(f.sub?esc(f.sub):"—")+'</div><div><span>AI 复现难度</span>'+stars(c.stars)+'</div></div>'
     + '<h5>画质风格详解</h5><p class="txt">'+esc(f.desc)+'</p>'
     + '<h5>介质与设备</h5><p class="sub">'+esc(f.equip)+'</p>'
@@ -537,7 +537,7 @@ function openStyle(num, slug){
     return '<li><span class="k">'+String(i+1).padStart(2,"0")+'</span><span class="lb">'+DATA.labels[i]+'</span><span class="v">'+esc(v)+'</span></li>';
   }).join("");
   var selBtns = films.map(function(f){
-    return '<button data-slug="'+f.slug+'"'+(f.slug===sel?' class="on"':'')+'>'+esc(f.cn)+'</button>';
+    return '<button data-slug="'+f.slug+'"'+(f.slug===sel?' class="on"':'')+'>'+esc(bilingual(f.cn,f.orig))+'</button>';
   }).join("");
   sheet.innerHTML =
     '<div class="ph"><img src="'+esc(filmBySlug[sel].img)+'" alt="'+esc(c.name)+'"><button class="close" id="dclose" aria-label="关闭">×</button></div>'
@@ -579,7 +579,7 @@ catEl.innerHTML = DATA.cats.map(function(c){
   var dna = c.dna.map(function(v,i){
     return '<li><span class="k">'+String(i+1).padStart(2,"0")+'</span><span class="lb">'+DATA.labels[i]+'</span><span class="v">'+esc(v)+'</span></li>';
   }).join("");
-  var btns = films.map(function(f){ return '<button data-slug="'+f.slug+'" data-cls="'+c.num+'">'+esc(f.cn)+'</button>'; }).join("");
+  var btns = films.map(function(f){ return '<button data-slug="'+f.slug+'" data-cls="'+c.num+'">'+esc(bilingual(f.cn,f.orig))+'</button>'; }).join("");
   return '<div class="catrow" id="cat-'+c.num+'">'
     + '<button class="cat-head"><span class="no">'+String(c.num).padStart(2,"0")+'</span>'
     + '<span class="nm">'+esc(c.name)+'</span><span class="en">'+esc(c.en)+'</span>'
