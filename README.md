@@ -1,26 +1,16 @@
 # 电影视觉风格图鉴
 
-两套独立的中文静态图鉴，用于非盈利学习分享。
+两套可独立运行的静态图鉴，保留检索、分类、详情弹窗、提示词复制及伪纪录画质对比功能。
 
-| 在线站点 | 源码目录 |
-| --- | --- |
-| [奥斯卡最佳摄影视觉风格图鉴](https://oscar-cinematography-atlas.vercel.app/) | `sites/oscar-cinematography/` |
-| [伪纪录恐怖画质风格图鉴](https://found-footage-horror-atlas.vercel.app/) | `sites/found-footage-horror/` |
+| 独立站点 | 公开地址 | 目录 |
+| --- | --- | --- |
+| 奥斯卡最佳摄影视觉风格图鉴 | https://oscar-cinematography-atlas.vercel.app/ | `sites/oscar-cinematography/` |
+| 伪纪录恐怖画质风格图鉴 | https://found-footage-horror-atlas.vercel.app/ | `sites/found-footage-horror/` |
 
-保留风格检索、分类索引、详情弹窗、提示词复制及伪纪录画质对比功能。两站均为独立 HTML，无后端、构建、环境变量或依赖安装；图片内嵌，Google Fonts 为可选网络字体。
+无需后端、构建、环境变量或依赖安装。两个 Vercel 静态项目分别使用上述目录。原始备份及本地验证材料不纳入本仓库。
 
-## 本地运行
+本版本按有来源的豆瓣名称核对记录更新显示和搜索，保留英文／已核原语言名称及旧名检索。510 条项目内记录中，427 条已核，82 条影视或人名中文名待核，另有 1 条期刊待核；待核不代表条目不存在。页面末尾可展开名称与来源，机器可读记录见 [名称来源](docs/douban-name-sources.json)。获奖年度与影片上映年份分别处理，不从奖届推算上映年。
 
-在仓库根目录运行 `python3 -m http.server 8765 --bind 127.0.0.1`，访问对应 `sites/` 路径；也可在支持本地文件的浏览器中打开各站 `index.html`。
+代码采用 [MIT](LICENSE)。第三方图片、字体、研究文字与提示词配方不自动适用 MIT，请阅读 [授权范围说明](NOTICE.md)。项目用于非盈利学习分享，用户已确认取得图片公开使用许可。
 
-## 部署
-
-两个 Vercel 静态项目分别以对应源码目录为 Root Directory，Framework 选 Other，安装和构建命令留空，输出目录为当前目录。无需购买域名或配置密钥。
-
-## 许可与来源
-
-代码采用 [MIT](LICENSE)。第三方图片、字体、研究文字及提示词配方不自动适用 MIT，详见 [授权范围说明](NOTICE.md)。用户已确认取得图片公开使用许可；原有来源与权利归属说明继续保留。
-
-《边陲》《咒》的图片来源页仍有疑问，已在详情中标记“来源待核”，未猜测替换。更多修正见 [变更记录](docs/CHANGES.md)。
-
-原始备份、内部核验材料及凭据不纳入仓库。外部资料的时效与准确性以对应原始来源为准。
+剪贴板失败回退、完整属性转义与来源待核提示均保留，参见 [修正记录](docs/CHANGES.md)。
