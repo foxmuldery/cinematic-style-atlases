@@ -4,12 +4,14 @@
 
 | 独立站点 | 公开地址 | 目录 |
 | --- | --- | --- |
-| 奥斯卡最佳摄影视觉风格图鉴 | https://oscar-cinematography-atlas.vercel.app/ | `sites/oscar-cinematography/` |
-| 伪纪录恐怖画质风格图鉴 | https://found-footage-horror-atlas.vercel.app/ | `sites/found-footage-horror/` |
+| 奥斯卡最佳摄影视觉风格图鉴 | https://oscar.foxlaoy.com/ | `sites/oscar-cinematography/` |
+| 伪纪录恐怖画质风格图鉴 | https://horror.foxlaoy.com/ | `sites/found-footage-horror/` |
 
 无需后端、构建、环境变量或依赖安装。两个 Vercel 静态项目分别使用上述目录。原始备份及本地验证材料不纳入本仓库。
 
-本版本按有来源的豆瓣名称核对记录更新显示和搜索，保留英文／已核原语言名称及旧名检索。510 条项目内记录中，427 条已核，82 条影视或人名中文名待核，另有 1 条期刊待核；待核不代表条目不存在。页面末尾可展开名称与来源，机器可读记录见 [名称来源](docs/douban-name-sources.json)。获奖年度与影片上映年份分别处理，不从奖届推算上映年。
+本版本按有来源的豆瓣名称记录更新显示和搜索，保留英文／已核原语言名称及旧名检索；未确定中文用名的条目只显示外文或原名。页面末尾提供贡献入口与名称来源，机器可读维护记录见 [名称来源](docs/douban-name-sources.json)。获奖年度与影片上映年份分别处理，不从奖届推算上映年。
+
+欢迎大家补充、投稿与校正。可通过本仓库提交参考作品、资料来源或修改建议。
 
 代码采用 [MIT](LICENSE)。第三方图片、字体、研究文字与提示词配方不自动适用 MIT，请阅读 [授权范围说明](NOTICE.md)。项目用于非盈利学习分享，用户已确认取得图片公开使用许可。
 
